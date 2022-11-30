@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Patrick Wojciech">
+    <meta name="description" content="Dashboard to control OBS and server.">
+
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript/obs-websocket.js"></script>
+</head>
+<body>
+<div id="main">
+    <button class="tablink" onclick="openPage('OBS', this, '#222222')" id="defaultOpen">OBS</button>
+    <button class="tablink" onclick="openPage('Streamheart', this, '#222222')">Streamheart</button>
+
+    <div id="OBS" class="tabcontent">
+        <div id="containerFirst" class="container">
+            <button id="start_stream" class="control_button">Go live</button>
+        </div>
+        <div class="header">Overlay</div>
+        <div class="container">
+            <!--            <button id="overlay_mute" class="backgroundimage control_button"></button>-->
+            <button id="overlay_hide" class="backgroundimage control_button" onclick="hide_overlay()"></button>
+            <button id="overlay_refresh" class="backgroundimage control_button" onclick="refresh_overlay()"></button>
+        </div>
+        <div class="header">Fix</div>
+        <div class="container">
+            <button id="refresh" class="problem_solve_section control_button" onclick="refresh()">
+                <div class="level_nr">
+                    <div>Refresh</div>
+                </div>
+                <div class="level_description">Ton/Bild Probleme.</br>
+                    Alle Szene und Quellen werden entladen und neugeladen.
+                </div>
+            </button>
+            <button id="restart_obs" class="problem_solve_section control_button" onclick="">
+                <div class="level_nr">
+                    <div>Restart</div>
+                </div>
+                <div class="level_description">OBS neustarten.</br>
+                    Stream wird unterbrochen!
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <div id="Streamheart" class="tabcontent">
+        <div class="container">
+            <button id="auto_brb" class="backgroundimage control_button" onclick="toggle_auto_brb()">Auto BRB ON
+            </button>
+            <button id="position" class="backgroundimage control_button" onclick="position()" disabled>Position</button>
+            <button id="screenshot" class="backgroundimage control_button" onclick="screenshot()">Screenshot</button>
+            <button id="bitrate" class="backgroundimage control_button" onclick="">Bitrate</button>
+        </div>
+        <div class="header">Fix</div>
+        <div class="container">
+            <button id="restart_streamheart" class="problem_solve_section control_button" onclick="">
+                <div class="level_nr">
+                    <div>Restart</div>
+                </div>
+                <div class="level_description">Streamheart neustarten.</div>
+            </button>
+        </div>
+    </div>
+</div>
+<div id="error" class="show">
+    <div class="loader"></div>
+</div>
+
+<script src="javascript/dashboard.js"></script>
+</body>
+</html>
