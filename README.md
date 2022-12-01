@@ -1,7 +1,10 @@
-# Streamheart
+<p align="center">
+  <img width="120" src="assets/logo_black.png">
+</p>
+<h1 align="center">Streamheart</h1>
 Streamheart is an intelligent modular streaming platform for IRL streams on Twitch.
 
-Streamheart has a central middleware (heart) through which modules that provide various functions connect. Each module can register to the middleware and subscribe other modules.
+Streamheart has a central middleware (heart) through which applications that provide various functions connect. Each application can register to the middleware and subscribe other application.
 
 ## Features
 - Bitrate tracker of RTMP connection
