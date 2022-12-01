@@ -6,6 +6,10 @@ Streamheart is an intelligent modular streaming platform for IRL streams on Twit
 
 Streamheart has a central middleware (heart) through which applications that provide various functions connect. Each application can register to the middleware and subscribe other application.
 
+<p align="center">
+<img width="700" src="assets/overview.png">
+</p>
+
 ## Features
 - Bitrate tracker of RTMP connection
   - Automatic switch to BRB in OBS if a threshold is reached
