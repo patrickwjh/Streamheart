@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="120" src="assets/logo_black.png">
+  <img width="120" src="assets/logo.png">
 </p>
 <h1 align="center">Streamheart</h1>
 Streamheart is an intelligent modular streaming platform for IRL streams on Twitch.
