@@ -30,7 +30,8 @@ class Client:
         self.ssl_cert = ssl_cert
 
         if ssl_cert:
-            self.ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS)
+            self.ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+            self.ssl_context.minimum_version = ssl.TLSVersion.TLSv1_3
             self.ssl_context.load_verify_locations(self.ssl_cert)
             self.ssl_context.verify_mode = ssl.CERT_NONE
 
